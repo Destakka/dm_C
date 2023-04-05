@@ -10,7 +10,7 @@ namespace dm_C
     {
         static void Main(string[] args)
         {
-  
+
         }
     }
 }
