@@ -61,7 +61,8 @@ namespace dm_C
                                                     Console.Clear();
                                                     Console.WriteLine("INPUT DATA PEMBELI\n");
                                                     Console.WriteLine("Masukkan id_pembeli :");
-                                                    string NIM = Console.ReadLine();
+                                                    string pl = Console.ReadLine();
+
                                                   
               
                                 }
