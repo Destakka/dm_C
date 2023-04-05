@@ -60,7 +60,7 @@ namespace dm_C
                                                 {
                                                     Console.Clear();
                                                     Console.WriteLine("INPUT DATA PEMBELI\n");
-                                                    Console.WriteLine("Masukkan id_pembeli :");
+                                                    Console.WriteLine("Masukkan Id Pembeli :");
                                                     string pl = Console.ReadLine();
                                                     Console.WriteLine("Masukkan Nama Pembeli :");
                                                     string np = Console.ReadLine();
@@ -93,7 +93,7 @@ namespace dm_C
                                     {
                                         Console.WriteLine("\nCheck for the value entered.");
                                     }
-                                   
+
                                 }
                             }
                         default:
@@ -112,11 +112,11 @@ namespace dm_C
                     Console.WriteLine("Tidak Dapat Mengakses Database Menggunakan User Tersebut\n");
                     Console.ResetColor();
                 }
+            }
         }
-    }
         public void baca(SqlConnection con)
         {
-            SqlCommand cmd = new SqlCommand("Select * From Apotek", con);
+            SqlCommand cmd = new SqlCommand("Select * From APOTEK", con);
             SqlDataReader r = cmd.ExecuteReader();
             while (r.Read())
             {
@@ -128,8 +128,26 @@ namespace dm_C
             }
             r.Close();
         }
+        public void insert(string pl, string np, string nt, string ap, SqlConnection con)
+        {
+            string str = "";
+            str = "insert into APOTEK (pl, np , nt , ap)"
+                + "values(@nim, @nma, @alamat, @JK, @Phn)";
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = System.Data.CommandType.Text;
+
+            cmd.Parameters.Add(new SqlParameter("Id Pembeli", pl));
+            cmd.Parameters.Add(new SqlParameter("Nama Pembeli", np));
+            cmd.Parameters.Add(new SqlParameter("No Telepon", nt));
+            cmd.Parameters.Add(new SqlParameter("Alamat Pembeli", ap));
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Data Berhasil Ditambahkan");
+        }
     }
 }
+
+
+
 
 
 
