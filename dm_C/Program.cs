@@ -66,7 +66,8 @@ namespace dm_C
                                                     string np = Console.ReadLine();
                                                     Console.WriteLine("Masukkan NO Telepon :");
                                                     string nt = Console.ReadLine();
-
+                                                    Console.WriteLine("Masukkan Alamat Pembeli :");
+                                                    string ap = Console.ReadLine();
 
 
                                                 }
