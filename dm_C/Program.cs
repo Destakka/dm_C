@@ -116,7 +116,7 @@ namespace dm_C
         }
         public void baca(SqlConnection con)
         {
-            SqlCommand cmd = new SqlCommand("Select * From APOTEK", con);
+            SqlCommand cmd = new SqlCommand("Select * From Apotek", con);
             SqlDataReader r = cmd.ExecuteReader();
             while (r.Read())
             {
@@ -131,7 +131,7 @@ namespace dm_C
         public void insert(string pl, string np, string nt, string ap, SqlConnection con)
         {
             string str = "";
-            str = "insert into APOTEK (pl, np , nt , ap)"
+            str = "insert into Apotek  (pl, np , nt , ap)"
                 + "values(@nim, @nma, @alamat, @JK, @Phn)";
             SqlCommand cmd = new SqlCommand(str, con);
             cmd.CommandType = System.Data.CommandType.Text;
