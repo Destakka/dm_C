@@ -62,10 +62,12 @@ namespace dm_C
                                                     Console.WriteLine("INPUT DATA PEMBELI\n");
                                                     Console.WriteLine("Masukkan id_pembeli :");
                                                     string pl = Console.ReadLine();
+                                                    Console.WriteLine("Masukkan Nama Pembeli :");
+                                                    string np = Console.ReadLine();
 
-                                                  
-              
-                                }
+
+
+                                                }
                             }
                     }
                 }
