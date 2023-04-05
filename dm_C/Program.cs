@@ -55,8 +55,15 @@ namespace dm_C
                                                     Console.WriteLine();
                                                     pr.baca(conn);
                                                 }
-                                                break;                         
-                                               
+                                                break;
+                                            case '2':
+                                                {
+                                                    Console.Clear();
+                                                    Console.WriteLine("INPUT DATA PEMBELI\n");
+                                                    Console.WriteLine("Masukkan id_pembeli :");
+                                                    string NIM = Console.ReadLine();
+                                                  
+              
                                 }
                             }
                     }
