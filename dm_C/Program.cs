@@ -68,6 +68,17 @@ namespace dm_C
                                                     string nt = Console.ReadLine();
                                                     Console.WriteLine("Masukkan Alamat Pembeli :");
                                                     string ap = Console.ReadLine();
+                                                    try
+                                                    {
+                                                        pr.insert(pl, np, nt, ap, conn);
+                                                    }
+                                                    catch
+                                                    {
+                                                        Console.WriteLine("\nAnda tidak memiliki " + "akses untuk menambah data");
+                                                    }
+                                                }
+                                                break ;
+                                            case '3':
 
 
                                                 }
