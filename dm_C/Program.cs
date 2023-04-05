@@ -77,15 +77,47 @@ namespace dm_C
                                                         Console.WriteLine("\nAnda tidak memiliki " + "akses untuk menambah data");
                                                     }
                                                 }
-                                                break ;
+                                                break;
                                             case '3':
-
-
+                                                conn.Close();
+                                                return;
+                                            default:
+                                                {
+                                                    Console.Clear();
+                                                    Console.WriteLine("\nInvalid option");
                                                 }
+                                                break;
+                                        }
+                                    }
+                                    catch
+                                    {
+                                        Console.WriteLine("\nCheck for the value entered.");
+                                    }
+                                   
+                                }
                             }
+                        default:
+                            {
+                                Console.WriteLine("\nInvalid option");
+                            }
+                            break;
+
+
                     }
                 }
-            }
+                catch
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Tidak Dapat Mengakses Database Menggunakan User Tersebut\n");
+                    Console.ResetColor();
+                }
         }
     }
+        public void baca(SqlConnection con)
+        { }
 }
+
+
+
+
